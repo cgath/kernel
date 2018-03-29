@@ -1,0 +1,43 @@
+<Model>
+    <ModelInfo>
+        <Author>
+        <CreationDateTime>
+        <LastModifiedDateTime>
+        <Instrument>
+        <InBases>
+            <InBase ID="1">
+                <Range 400 1099.5 0.5>
+                <Range 1100 2499.5 0.5>
+            </InBase>
+        <InBases>
+    <Preprocessors>
+        <Preprocessor ID="1">
+            <ScatterCorrectionBlock type="SNV" />
+            <DerivativeBlock order="1" />
+            <VariableSelectionBlock>
+                <Range 400 1099.5 0.5>
+                <Range 1100 2499.5 0.5>
+            </VariableSelectionBlock>
+            <CenteringBlock CenterY="true" />
+        </Preprocessor>
+        <Preprocessor ID="2">
+            <ScatterCorrectionBlock type="SNV" />
+            <DerivativeBlock order="1" />
+            <VariableSelectionBlock>
+                <Range 400 1099.5 0.5>
+                <Range 1100 2499.5 0.5>
+            </VariableSelectionBlock>
+        </Preprocessor>
+    </Preprocessors>
+    <Processors>
+        <Processor ID="1">
+            <FusionBlock >
+            <PLSBlock NumberOfFactors="16" />
+        </Processor>
+    </Processors>
+    <Postprocessors>
+        <PostProcessingBlock />
+    </Postprocessors>
+<Model>
+
+
